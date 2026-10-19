@@ -134,7 +134,7 @@ class Quorum(gl.Contract):
         _require(claim != "", "EMPTY_CLAIM")
         assessor_address = Address(assessor)
         _require(assessor_address != gl.message.sender_address, "ASSESSOR_IS_CLAIMANT")
-        _require(assessor_address != Address.ZERO, "ASSESSOR_IS_ZERO")
+        _require(assessor_address != Address("0x0000000000000000000000000000000000000000"), "ASSESSOR_IS_ZERO")
         texts = [_one_line(x, MAX_ITEM_LEN) for x in item_texts]
         _require(all(type(x) is int for x in item_weights), "INTEGER_WEIGHTS_REQUIRED")
         _require(type(threshold) is int, "INTEGER_THRESHOLD_REQUIRED")
