@@ -1,0 +1,13 @@
+{
+  "status": "ready_for_manual_portal_submission",
+  "date": "2026-10-19",
+  "address": "0xE5902271f340375ec58BA8E29eb6DA22716492e9",
+  "source_commit": "6a7ac888b22bf91ae65ecb98c519f1971b2bd0bd",
+  "source_sha256": "d349dd689e2ea123c44c6dae29abaa0de9aff80c2d7d30e345abdb6ad694269a",
+  "local_test_groups": 10,
+  "live_cases_passed": 3,
+  "deployed": true,
+  "live_consensus_tested": true,
+  "two_account_countersigning_tested": true,
+  "portal_submitted": false
+}

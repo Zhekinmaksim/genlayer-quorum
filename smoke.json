@@ -1,0 +1,190 @@
+{
+  "network": "studionet",
+  "executed": true,
+  "cases": [
+    {
+      "id": "quorum-exact-001",
+      "open_args": [
+        "quorum-exact-001",
+        "0x4988285d5a05da3a1827f21330fdf14d9f81d4c9",
+        "Release R has a documented rollback procedure.",
+        [
+          "Release R operations note: rollback restores snapshot R-1, then runs smoke checks.",
+          "Operator checklist for R specifies rollback to snapshot R-1 with owner Alice.",
+          "The cafeteria lunch menu lists soup."
+        ],
+        [
+          3,
+          2,
+          7
+        ],
+        5
+      ],
+      "expected": {
+        "outcome": 1,
+        "accepted_weight": 5,
+        "accept_mask": 3
+      },
+      "transactions": {
+        "open_claim": "0x59e045f471e59d1510548fcd1bf62c579851fa0cfcedc4fc868f63d135084bbe",
+        "countersign": "0xa8638ce97b2367bbb46ebf7fe7e956745ec191272d92af42608a8eeb5c6771fd",
+        "evaluate": "0x64eb420dfebc35836e68d058dcd8d6b9237d748044e63977ee75a4a5c217fd74"
+      },
+      "commitment": "0x78208c8fcd5992f801630aaa9618b280515b45cadf54ed7596d1820217970ee6",
+      "result": {
+        "accept_mask": 3,
+        "accepted_weight": 5,
+        "assessor": "0x4988285D5a05da3a1827f21330fdf14d9F81d4C9",
+        "claim_id": "quorum-exact-001",
+        "claimant": "0x771388495F34d21C5574FeFc04cd1D5811E00aDa",
+        "countersigned": true,
+        "input_hash": "0xf7e7a6daba0bd37a5d2b7b8558cadef324326f480f28b1ab7f67ae3bfa98e0d9",
+        "outcome": 1,
+        "policy_hash": "0x483cb24158b83e064093f2eb0b8346ab8c81ea6c04fa67c87a9412231210f3f2",
+        "reason": "weighed",
+        "result_hash": "0xcfa6c10fc0c8d29e06b2d21c18b5ecd6e4c37826ccdfc7c597a7b113d797df3e",
+        "terms_hash": "0x78208c8fcd5992f801630aaa9618b280515b45cadf54ed7596d1820217970ee6",
+        "threshold": 5
+      },
+      "matches_expected": true,
+      "countersign_receipt": {
+        "transaction": "0xa8638ce97b2367bbb46ebf7fe7e956745ec191272d92af42608a8eeb5c6771fd",
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "consensus": "MAJORITY_AGREE",
+        "leader_only": false,
+        "sender": "0x4988285D5a05da3a1827f21330fdf14d9F81d4C9"
+      },
+      "evaluation_receipt": {
+        "transaction": "0x64eb420dfebc35836e68d058dcd8d6b9237d748044e63977ee75a4a5c217fd74",
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "consensus": "MAJORITY_AGREE",
+        "leader_only": false,
+        "sender": "0x771388495F34d21C5574FeFc04cd1D5811E00aDa"
+      }
+    },
+    {
+      "id": "quorum-below-001",
+      "open_args": [
+        "quorum-below-001",
+        "0x4988285d5a05da3a1827f21330fdf14d9f81d4c9",
+        "Release R has a documented rollback procedure.",
+        [
+          "Release R operations note: rollback restores snapshot R-1, then runs smoke checks.",
+          "Operator checklist for R specifies rollback to snapshot R-1 with owner Alice.",
+          "The cafeteria lunch menu lists soup."
+        ],
+        [
+          3,
+          2,
+          7
+        ],
+        6
+      ],
+      "expected": {
+        "outcome": 2,
+        "accepted_weight": 5,
+        "accept_mask": 3
+      },
+      "transactions": {
+        "open_claim": "0x69d31567e94b05b45eaa8616ea7808b11c0c1a1699ceebf0af30edc023c8f830",
+        "countersign": "0x78a54cd359c635f8b5eecca91fb78100db0e9b2f2844d0847cde88f28c8c8291",
+        "evaluate": "0x1ab2a9fbf4a025a87d0203e8851f012d9836d41e6a2b735a2152381ad4b5da01"
+      },
+      "commitment": "0xfc200692cddab8799a0c7deca6fdf365648a97d1b3430a759c668801f030adef",
+      "result": {
+        "accept_mask": 3,
+        "accepted_weight": 5,
+        "assessor": "0x4988285D5a05da3a1827f21330fdf14d9F81d4C9",
+        "claim_id": "quorum-below-001",
+        "claimant": "0x771388495F34d21C5574FeFc04cd1D5811E00aDa",
+        "countersigned": true,
+        "input_hash": "0xf7e7a6daba0bd37a5d2b7b8558cadef324326f480f28b1ab7f67ae3bfa98e0d9",
+        "outcome": 2,
+        "policy_hash": "0xb34c4aec4e73663107e556754f028725977544e2854b4a3c53098545b4a5cd3d",
+        "reason": "weighed",
+        "result_hash": "0x23df19be24f3221842e6e6d19bef287f52379aea4cd2b1b695196faa9807a8b5",
+        "terms_hash": "0xfc200692cddab8799a0c7deca6fdf365648a97d1b3430a759c668801f030adef",
+        "threshold": 6
+      },
+      "matches_expected": true,
+      "countersign_receipt": {
+        "transaction": "0x78a54cd359c635f8b5eecca91fb78100db0e9b2f2844d0847cde88f28c8c8291",
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "consensus": "MAJORITY_AGREE",
+        "leader_only": false,
+        "sender": "0x4988285D5a05da3a1827f21330fdf14d9F81d4C9"
+      },
+      "evaluation_receipt": {
+        "transaction": "0x1ab2a9fbf4a025a87d0203e8851f012d9836d41e6a2b735a2152381ad4b5da01",
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "consensus": "MAJORITY_AGREE",
+        "leader_only": false,
+        "sender": "0x771388495F34d21C5574FeFc04cd1D5811E00aDa"
+      }
+    },
+    {
+      "id": "quorum-none-001",
+      "open_args": [
+        "quorum-none-001",
+        "0x4988285d5a05da3a1827f21330fdf14d9f81d4c9",
+        "Release R has a documented rollback procedure.",
+        [
+          "The cafeteria serves soup.",
+          "The building has a blue door."
+        ],
+        [
+          3,
+          7
+        ],
+        5
+      ],
+      "expected": {
+        "outcome": 2,
+        "accepted_weight": 0,
+        "accept_mask": 0
+      },
+      "transactions": {
+        "open_claim": "0x2daa9f5107d2d6a74d23e95a0ab378eb252b020ed785bdcd570e8c605503d8a9",
+        "countersign": "0x5553a83147cc70ddc408c886b4be029e843c7254b22a9772e7808d923b7f09d9",
+        "evaluate": "0xd0251427b7f24853baa8a3ab1901de0b60fbd2d37ea1d4ca86935ba158872a28"
+      },
+      "commitment": "0x783932bf458632f23d06489662bfb4045ed130d1b65ce263aa47aae018d1295e",
+      "result": {
+        "accept_mask": 0,
+        "accepted_weight": 0,
+        "assessor": "0x4988285D5a05da3a1827f21330fdf14d9F81d4C9",
+        "claim_id": "quorum-none-001",
+        "claimant": "0x771388495F34d21C5574FeFc04cd1D5811E00aDa",
+        "countersigned": true,
+        "input_hash": "0x6c03e0aaa22dac62e070ad8b41826c2dfd10b071488ade97ac2246ae283a5a37",
+        "outcome": 2,
+        "policy_hash": "0x1b7a02fb4caa27ce196878f6745a434e0cf9987e1326f19f335543131d6cb901",
+        "reason": "weighed",
+        "result_hash": "0xa0e597799ca9c5f59dddc52a5122379253b941bf67efd56f81ea018db6b08cb3",
+        "terms_hash": "0x783932bf458632f23d06489662bfb4045ed130d1b65ce263aa47aae018d1295e",
+        "threshold": 5
+      },
+      "matches_expected": true,
+      "countersign_receipt": {
+        "transaction": "0x5553a83147cc70ddc408c886b4be029e843c7254b22a9772e7808d923b7f09d9",
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "consensus": "MAJORITY_AGREE",
+        "leader_only": false,
+        "sender": "0x4988285D5a05da3a1827f21330fdf14d9F81d4C9"
+      },
+      "evaluation_receipt": {
+        "transaction": "0xd0251427b7f24853baa8a3ab1901de0b60fbd2d37ea1d4ca86935ba158872a28",
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "consensus": "MAJORITY_AGREE",
+        "leader_only": false,
+        "sender": "0x771388495F34d21C5574FeFc04cd1D5811E00aDa"
+      }
+    }
+  ]
+}
