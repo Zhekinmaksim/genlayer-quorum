@@ -1,0 +1,109 @@
+{
+  "ctor": {
+    "params": [],
+    "kwparams": {}
+  },
+  "methods": {
+    "countersign": {
+      "params": [
+        [
+          "claim_id",
+          "string"
+        ],
+        [
+          "terms_hash",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "evaluate": {
+      "params": [
+        [
+          "claim_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "get_outcome": {
+      "params": [
+        [
+          "claim_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "int"
+    },
+    "get_result": {
+      "params": [
+        [
+          "claim_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "get_terms_hash": {
+      "params": [
+        [
+          "claim_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "open_claim": {
+      "params": [
+        [
+          "claim_id",
+          "string"
+        ],
+        [
+          "assessor",
+          "string"
+        ],
+        [
+          "claim_text",
+          "string"
+        ],
+        [
+          "item_texts",
+          [
+            {
+              "$rep": "string"
+            }
+          ]
+        ],
+        [
+          "item_weights",
+          [
+            {
+              "$rep": "int"
+            }
+          ]
+        ],
+        [
+          "threshold",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    }
+  }
+}
